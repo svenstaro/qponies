@@ -1,0 +1,13 @@
+Add to pony.ini of Nightmare Moon:
+
+Behavior,"NMM Luna",0,5,5,0,"stand_right.gif","stand_left.gif",None,"NMM Luna 1","","Luna",True,0,0,"Princess Luna (Season 2)"
+Behavior,"NMM Luna 1",0,4,4,0,"stand_right.gif","stand_left.gif",None,"","","Luna 1",True,0,0,"Princess Luna (Season 2)"
+
+Speak,"Luna","But... what about our eternal night?","",True
+Speak,"Luna 1","???","",True
+
+
+
+Add to interactions.ini:
+
+NMM Luna,"Princess Luna (Season 2)",0.2,200,{"Nightmare Moon"},False,{"NMM Luna"},300
