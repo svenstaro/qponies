@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     timer.setInterval(100);
     timer.start();
 
-    QMovie* m = new QMovie("/home/svenstaro/prj/qponies/images/desktop-ponies/Rainbow Dash/trotcycle_rainbow_wing_left.gif");
+    QMovie* m = new QMovie("../images/desktop-ponies/Rainbow Dash/trotcycle_rainbow_wing_left.gif");
     QLabel l(w);
     QLabel b(w);
     l.setMovie(m);
