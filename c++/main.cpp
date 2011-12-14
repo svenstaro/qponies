@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     timer.setInterval(100);
     timer.start();
 
-    QMovie* m = new QMovie(QCoreApplication::applicationDirPath()+"/"+"trotcycle_rainbow_wing_left.gif");
+    QMovie* m = new QMovie(":/rbd");
     QLabel l(w);
     QLabel b(w);
     l.setMovie(m);

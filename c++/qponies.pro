@@ -9,9 +9,11 @@ QT       += core gui
 TARGET = qponies
 TEMPLATE = app
 
-
 SOURCES += main.cpp \
     pony.cpp
 
 HEADERS  += \
     pony.hpp
+
+RESOURCES += \
+    qponies.qrc

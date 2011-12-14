@@ -5,7 +5,7 @@ Pony::Pony(QWidget *parent) :
 {
     this->setAttribute(Qt::WA_TranslucentBackground);
     this->setWindowFlags(Qt::FramelessWindowHint);
-#if !defined(WIN32) || !defined(MACOSX)
+#ifdef Q_WS_X11
     this->setWindowFlags(Qt::X11BypassWindowManagerHint);
 #endif
 }
