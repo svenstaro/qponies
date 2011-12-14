@@ -9,13 +9,15 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath());
+
     Pony* w = new Pony();
 
     QTimer timer;
     timer.setInterval(100);
     timer.start();
 
-    QMovie* m = new QMovie("../images/desktop-ponies/Rainbow Dash/trotcycle_rainbow_wing_left.gif");
+    QMovie* m = new QMovie(QCoreApplication::applicationDirPath()+"/"+"trotcycle_rainbow_wing_left.gif");
     QLabel l(w);
     QLabel b(w);
     l.setMovie(m);
@@ -26,8 +28,6 @@ int main(int argc, char *argv[])
     w->resize(m->currentImage().size());
     l.setGraphicsEffect(new QGraphicsBlurEffect());
     w->show();
-
-    qDebug() << QCursor::pos();
 
     QObject::connect(&timer, SIGNAL(timeout()), w, SLOT(movelol()));
 
