@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file alias="rbd">trotcycle_rainbow_wing_left.gif</file>
-    </qresource>
-</RCC>

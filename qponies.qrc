@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
         <file alias="rbd">images/desktop-ponies/Rainbow Dash/trotcycle_rainbow_wing_left.gif</file>
-        <file>qml/qponies/main.qml</file>
     </qresource>
 </RCC>

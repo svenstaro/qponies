@@ -1,18 +1,35 @@
 #include <QtGui/QApplication>
-#include "qmlapplicationviewer.h"
+#include <QtGui/QMovie>
+#include <QtGui/QLabel>
+#include <QGraphicsEffect>
+#include <QTimer>
+#include <QDebug>
+#include "pony.hpp"
 
-Q_DECL_EXPORT int main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-    QScopedPointer<QApplication> app(createApplication(argc, argv));
-    QScopedPointer<QmlApplicationViewer> viewer(QmlApplicationViewer::create());
+    QApplication a(argc, argv);
+    QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath());
 
-    // Compare performance here
-    //QApplication::setGraphicsSystem("raster");
-    //QApplication::setGraphicsSystem("opengl");
+    Pony* w = new Pony();
 
-    viewer->setOrientation(QmlApplicationViewer::ScreenOrientationAuto);
-    viewer->setMainQmlFile(QString("qrc:/qml/qponies/main.qml"));
-    viewer->showExpanded();
+    QTimer timer;
+    timer.setInterval(100);
+    timer.start();
 
-    return app->exec();
+    QMovie* m = new QMovie(":/rbd");
+    QLabel l(w);
+    QLabel b(w);
+    l.setMovie(m);
+    b.setMovie(m);
+    l.setGeometry(0, 0, 100, 100);
+    b.setGeometry(0, 0, 100, 100);
+    m->start();
+    w->resize(m->currentImage().size());
+    l.setGraphicsEffect(new QGraphicsBlurEffect());
+    w->show();
+
+    QObject::connect(&timer, SIGNAL(timeout()), w, SLOT(movelol()));
+
+    return a.exec();
 }

@@ -4,11 +4,11 @@ qponies - desktop ponies using qml
 Why
 ===
 Because the other desktop ponies implementations are slow, they flicker and they
-are not using QML.
+are not using Qt.
 
 How
 ===
-To get this, you will need a very recent version of Qt (4.7.4 and above).
+To get this, you will need a somewhat recent version of Qt4.
 Compile using the ususal procedure when dealing with Qt things:
 
 - mkdir build
