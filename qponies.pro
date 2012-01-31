@@ -9,6 +9,8 @@ QT       += core gui
 TARGET = qponies
 TEMPLATE = app
 
+#CONFIG += static
+
 SOURCES += main.cpp \
     pony.cpp
 

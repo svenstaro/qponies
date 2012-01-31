@@ -1,5 +1,5 @@
-qponies - desktop ponies using qml
-==================================
+qponies - desktop ponies using qt
+=================================
 
 Why
 ===
