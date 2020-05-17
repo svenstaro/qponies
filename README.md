@@ -8,7 +8,7 @@ are not using Qt.
 
 How
 ===
-To get this, you will need a somewhat recent version of Qt4.
+To get this, you will need a somewhat recent version of Qt5.
 Compile using the ususal procedure when dealing with Qt things:
 
 - mkdir build
