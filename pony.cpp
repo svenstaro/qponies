@@ -1,7 +1,7 @@
 #include "pony.hpp"
 
-Pony::Pony(QWidget *parent) :
-    QMainWindow(parent)
+Pony::Pony(QWidget* parent)
+    : QMainWindow(parent)
 {
     this->setAttribute(Qt::WA_TranslucentBackground);
     this->setWindowFlags(Qt::FramelessWindowHint);
@@ -10,7 +10,8 @@ Pony::Pony(QWidget *parent) :
 #endif
 }
 
-void Pony::movelol() {
-    this->move(this->pos().x()+1,
-               this->pos().y()+1);
+void Pony::movelol()
+{
+    this->move(this->pos().x() + 1,
+        this->pos().y() + 1);
 }

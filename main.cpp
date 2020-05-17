@@ -1,12 +1,12 @@
-#include <QtGui/QApplication>
-#include <QtGui/QMovie>
-#include <QtGui/QLabel>
-#include <QGraphicsEffect>
-#include <QTimer>
-#include <QDebug>
 #include "pony.hpp"
+#include <QDebug>
+#include <QTimer>
+#include <QtGui/QMovie>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QGraphicsEffect>
+#include <QtWidgets/QLabel>
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
     QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath());
